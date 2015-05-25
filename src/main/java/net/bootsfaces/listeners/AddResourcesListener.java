@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.faces.FacesException;
@@ -53,7 +54,7 @@ import net.bootsfaces.C;
  */
 public class AddResourcesListener implements SystemEventListener {
 
-	private static final Logger LOGGER = Logger.getLogger("net.bootsfaces.listeners.AddResourcesListener");
+	private static final Logger LOGGER = Logger.getLogger(AddResourcesListener.class.getName());
 
 	/**
 	 * Components can request resources by registering them in the ViewMap,
@@ -69,7 +70,9 @@ public class AddResourcesListener implements SystemEventListener {
 	 * Trigger adding the resources if and only if the event has been fired by
 	 * UIViewRoot.
 	 */
+        @Override
 	public void processEvent(SystemEvent event) throws AbortProcessingException {
+            Logger.getLogger(AddResourcesListener.class.getName()).log(Level.INFO, "processEvent");
 		Object source = event.getSource();
 		if (source instanceof UIViewRoot) {
 			final FacesContext context = FacesContext.getCurrentInstance();

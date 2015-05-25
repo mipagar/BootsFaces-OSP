@@ -17,6 +17,14 @@
             javax.faces.event.PreRenderViewEvent
          </system-event-class>    					
       </system-event-listener>
+      <system-event-listener>
+         <system-event-listener-class>
+            net.bootsfaces.listeners.RemoveBSFResouces
+         </system-event-listener-class>
+         <system-event-class>
+            javax.faces.event.PreRenderViewEvent
+         </system-event-class>    					
+      </system-event-listener>
     </application>
 
 	<ordering>
