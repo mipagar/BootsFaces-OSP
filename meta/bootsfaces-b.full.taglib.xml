@@ -274,6 +274,12 @@
 			<type>java.lang.String</type>
 		</attribute>
 		<attribute>
+			<description><![CDATA[Italic Description displayed in Modal's header.]]></description>
+			<name>description</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
 			<description><![CDATA[Modal's size. Possible values modal-sm, modal-lg]]></description>
 			<name>size</name>
 			<required>false</required>
@@ -895,9 +901,9 @@
 		</attribute>
 	</tag>
 	<tag>
-		<tag-name>listLinks</tag-name>
+		<tag-name>listGroup</tag-name>
 		<component>
-			<component-type>net.bootsfaces.component.ListLinks</component-type>
+			<component-type>net.bootsfaces.component.ListGroup</component-type>
 		</component>
 		<attribute>
 			<description><![CDATA[Unique identifier of the component in a namingContainer.]]></description>

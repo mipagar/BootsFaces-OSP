@@ -24,15 +24,17 @@ public class RemoveBSFResouces implements SystemEventListener {
 
     @Override
     public void processEvent(SystemEvent event) throws AbortProcessingException {
-        UIViewRoot root = (UIViewRoot) event.getSource();
-        FacesContext fc = FacesContext.getCurrentInstance();
-        
-        List<UIComponent> resources = new ArrayList<UIComponent>(root.getComponentResources(fc, "head"));
-        ArrayList<UIComponent> bodyComponents = new ArrayList<UIComponent>(root.getComponentResources(fc, "body"));
-        resources.addAll(bodyComponents);
-        for (UIComponent c : resources) {
-            if ("bsf".equals(c.getAttributes().get("library"))) {
-                root.removeComponentResource(fc, c);
+        if (false) {
+            UIViewRoot root = (UIViewRoot) event.getSource();
+            FacesContext fc = FacesContext.getCurrentInstance();
+
+            List<UIComponent> resources = new ArrayList<UIComponent>(root.getComponentResources(fc, "head"));
+            ArrayList<UIComponent> bodyComponents = new ArrayList<UIComponent>(root.getComponentResources(fc, "body"));
+            resources.addAll(bodyComponents);
+            for (UIComponent c : resources) {
+                if ("bsf".equals(c.getAttributes().get("library"))) {
+                    root.removeComponentResource(fc, c);
+                }
             }
         }
     }

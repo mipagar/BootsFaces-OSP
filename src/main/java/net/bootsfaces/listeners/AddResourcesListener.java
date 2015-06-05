@@ -72,7 +72,6 @@ public class AddResourcesListener implements SystemEventListener {
 	 */
         @Override
 	public void processEvent(SystemEvent event) throws AbortProcessingException {
-            Logger.getLogger(AddResourcesListener.class.getName()).log(Level.INFO, "processEvent");
 		Object source = event.getSource();
 		if (source instanceof UIViewRoot) {
 			final FacesContext context = FacesContext.getCurrentInstance();

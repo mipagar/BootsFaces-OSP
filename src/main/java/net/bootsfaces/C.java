@@ -63,6 +63,7 @@ public final class C {
     public static final String INTERNAL_IE8_COMPATIBILITY_LINK=BSFCOMPONENT+".InternalIE8CompatibilityLink";
     public static final String LABEL_COMPONENT_TYPE=BSFCOMPONENT+".Label";
     public static final String LISTLINKS_COMPONENT_TYPE=BSFCOMPONENT+".ListLinks";
+    public static final String LISTGROUP_COMPONENT_TYPE=BSFCOMPONENT+".ListGroup";
     public static final String MODAL_COMPONENT_TYPE=BSFCOMPONENT+".Modal";
     public static final String NAVBAR_COMPONENT_TYPE=BSFCOMPONENT+".NavBar";
     public static final String NAVBARLINKS_COMPONENT_TYPE=BSFCOMPONENT+".NavBarLinks";

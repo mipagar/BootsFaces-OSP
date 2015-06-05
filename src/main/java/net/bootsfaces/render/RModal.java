@@ -75,7 +75,7 @@ public enum RModal {
         
         Map<String, Object> attrs = c.getAttributes();
         
-        String title = attrs.get(A.TITLE).toString();
+        String title = (String) attrs.get(A.TITLE);
         boolean closable= A.toBool(attrs.get(A.CLOSABLE));
         rw.startElement(H.DIV, c); //modal
         rw.writeAttribute(H.ID,c.getClientId(fc),H.ID);
@@ -110,11 +110,19 @@ public enum RModal {
         rw.write("&".concat("times").concat(";"));
         rw.endElement(H.BUTTON);
         
-        if(title!=null) {
+        if (title != null) {
             rw.startElement(H.H4, c);
-            rw.writeAttribute(H.ID,c.getClientId(fc)+"_Label",H.ID);
+            rw.writeAttribute(H.ID, c.getClientId(fc) + "_Label", H.ID);
             rw.writeText(title, null);
             rw.endElement(H.H4);
+            
+            Object description = attrs.get("description");
+            if (null != description) {
+                rw.startElement(H.DIV, c);
+                rw.writeAttribute(H.STYLE, "font-style: italic;", H.STYLE);
+                rw.writeText(description, null);
+                    rw.endElement(H.DIV);
+            }
             rw.startElement(H.BR, c);
             rw.endElement(H.BR);
         }
@@ -152,6 +160,6 @@ public enum RModal {
         rw.endElement(H.DIV); //modal-content
         rw.endElement(H.DIV); //modal-dialog
         rw.endElement(H.DIV); //modal
-        JQ.initModal(rw, c.getClientId(fc));
+//        JQ.initModal(rw, c.getClientId(fc));
     }
 }
