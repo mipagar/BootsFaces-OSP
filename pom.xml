@@ -33,9 +33,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git@github.com:TheCoder4eu/BootsFaces-OSP.git</connection>
-		<developerConnection>scm:git:git@github.com:TheCoder4eu/BootsFaces-OSP.git</developerConnection>
-		<url>git@github.com:TheCoder4eu/BootsFaces-OSP.git</url>
+		<connection>scm:git:git@github.com:mipagar/BootsFaces-OSP.git</connection>
+		<developerConnection>scm:git:git@github.com:mipagar/BootsFaces-OSP.git</developerConnection>
+                <url>git@github.com:mipagar/BootsFaces-OSP.git</url>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
